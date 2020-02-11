@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Diner</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="nav">
+                <ul class="nav-pages">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Diner</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="thumbnail"></div>
+        </header>
+
+        <div class="diner-grid">
+            <div class="categories"></div>
+            <div class="menu">
+            <main class="menu-flex"></main>
+            </div>
+        </div>
+    </div>
+
+    <template id="template">
+        <article class="menu-items">
+            <header class="name">
+                <h1>Name</h1>
+            </header>
+            <img class="img" src="">
+            <p class="sd">Short Description</p>
+            <h2 id="price" class="price">Price: <span class="p">price</span>DKK</h2>
+            <h2 id="discount" class="no-discount"><span>price</span>DKK</h2>
+            <h3 id="soldout" class="soldout">Sold Out</h3>
+            <h3 id="vegan">Vegan</h3>
+        </article>
+    </template>
+    <script src="script.js"></script>
+</body>
+</html>

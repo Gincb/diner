@@ -1,0 +1,131 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    min-height: 40px;
+    max-height: 100px;
+    min-width: 100%;
+    background-color: whitesmoke;
+}
+
+.nav-pages {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    border-radius: 5px;
+    list-style-type: none;
+}
+
+.logo {
+    height: 50px;
+}
+
+.nav-item {
+    padding: 5px 15px;
+    display: inline-block;
+    transition: all .3s ease;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-link,
+.nav-item {
+    color: #1f1f1f;
+}
+
+/* Navigation End */
+
+.thumbnail {
+    height: 300px;
+    width: 100%;
+    background-color: beige;
+}
+
+/* Thumbnail End */
+
+.diner-grid {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    grid-template-areas: "categories menu";
+}
+
+.categories {
+    grid-area: categories;
+    background-color: teal;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: white;
+}
+
+.menu-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.menu-items {
+    margin: 20px;
+    padding: 10px;
+    width: 400px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 16vh 30vh 12vh 7vh 7vh;
+    grid-template-areas: "name name" ". ." "sd sd" "price discount" "soldout vegan";
+    background-color: whitesmoke;
+    box-shadow: 1px 2px 5px rgb(185, 185, 185);
+    border-radius: 5px;
+}
+
+.name {
+    grid-area: name;
+}
+
+.sd {
+    grid-area: sd;
+}
+
+.price {
+    grid-area: price;
+}
+
+#discount {
+    grid-area: discount;
+}
+
+.soldout {
+    grid-area: soldout;
+}
+
+#vegan {
+    grid-area: vegan;
+}
+
+.img {
+    width: 400px;
+}
+
+.ifdiscount {
+    text-decoration: line-through;
+    text-decoration-color: tomato;
+}
