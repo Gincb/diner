@@ -85,17 +85,8 @@ function makeDiner(jsonData) {
         console.log(data)
         modal.querySelector(".modal-name").textContent = data.name;
         modal.querySelector(".modal-description").textContent = data.longdescription;
+        modal.querySelector(".modal-image").setAttribute("src", `https://kea-alt-del.dk/t5/site/imgs/large/${jsonData.image}.jpg`);
         modal.classList.remove("hide");
-    }
-      
-    function dumbStuff() {
-    const all = document.querySelectorAll("article, article>*");
-    console.log(all)
-        setInterval(() => {
-        const a = all[Math.floor(Math.random() * all.length)];
-        animate(a);
-    
-    }, 100)
     }
       
     function animate(el) {
@@ -103,7 +94,6 @@ function makeDiner(jsonData) {
         el.style.transform = `translate(${Math.random()*200-100}vw, ${Math.random()*200-100}vh) scale(${Math.random()+.5})`;
     }
     
-
     const where = document.querySelector("main");
     document.querySelector(`#${jsonData.category}`).appendChild(myClone);
     where.appendChild(myClone);
