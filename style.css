@@ -3,6 +3,8 @@ html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background-color: #F7F7F7;
+    scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -18,7 +20,7 @@ html {
     min-height: 40px;
     max-height: 100px;
     min-width: 100%;
-    background-color: whitesmoke;
+    background-color: #AB9A9A;
 }
 
 .nav-pages {
@@ -56,7 +58,7 @@ a {
 .thumbnail {
     height: 300px;
     width: 100%;
-    background-color: beige;
+    background-color: #89AB92;
 }
 
 /* Thumbnail End */
@@ -73,15 +75,17 @@ a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
-    padding: 1em 0;
-    font-size: 2em;
+    align-items: flex-start;
+    padding: 1em;
+    font-size: 1.5em;
     text-transform: capitalize;
-    background-color: #f8f8f8;
+    background-color: #AB9A9A;
 }
 
 .categories>a {
     padding: 0.2em;
+    text-decoration: none;
+    color: #1f1f1f;
 }
 
 .menu-flex>section {
@@ -104,9 +108,9 @@ a {
     width: 400px;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 16vh 30vh 12vh 7vh 7vh;
-    grid-template-areas: "name name" ". ." "sd sd" "price discount" "soldout vegan";
-    background-color: whitesmoke;
+    grid-template-rows: 10vh 35vh 7vh 5vh auto auto;
+    grid-template-areas: "name name" "img img" "sd sd" "button button " "price price" "soldout vegan";
+    background-color: white;
     box-shadow: 1px 2px 5px rgb(185, 185, 185);
     border-radius: 5px;
 }
@@ -115,31 +119,78 @@ a {
     grid-area: name;
 }
 
+.img {
+    grid-area: img;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+}
+
+.button {
+    grid-area: button;
+    background-color: #89AB92;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #657e6c;
+}
+
 .sd {
     grid-area: sd;
 }
 
 .price {
     grid-area: price;
-}
-
-#discount {
-    grid-area: discount;
+    padding: 0.5em;
+    font-size: 1.5em;
+    text-align: center;
+    color: #333333;
 }
 
 .soldout {
     grid-area: soldout;
+    text-align: center;
+    margin: auto;
 }
 
 #vegan {
     grid-area: vegan;
 }
 
-.img {
-    width: 400px;
+.vegan {
+    color: #89AB92;
+    text-align: center;
+    font-size: 2em;
+    padding: 0;
 }
 
 .ifdiscount {
     text-decoration: line-through;
     text-decoration-color: tomato;
+}
+
+.hide {
+    display: none;
+}
+
+.modal-background {
+    position: fixed;    
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b3;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    border: 1px solid #7c1f17;
+    margin: 1em;
+    padding: 2em;
 }

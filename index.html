@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <title>Diner</title>
 </head>
 <body>
@@ -33,14 +36,23 @@
             <header class="name">
                 <h1>Name</h1>
             </header>
-            <img class="img" src="">
+            <div class="img"></div>
             <p class="sd">Short Description</p>
-            <h2 id="price" class="price">Price: <span class="p">price</span>DKK</h2>
-            <h2 id="discount" class="no-discount"><span>price</span>DKK</h2>
+            <button class="button">Read More</button>
+            <h2 id="price" class="price"><span class="p">price</span>DKK</h2>
             <h3 id="soldout" class="soldout">Sold Out</h3>
-            <h3 id="vegan">Vegan</h3>
+            <i id="vegan" class="fas fa-seedling vegan"></i>
         </article>
     </template>
+
+    <div class="modal-background hide">
+        <div class="modal-content">
+          <h3 class="modal-name">NAME</h3>
+          <img src="" alt="" class="modal-image" />
+          <p class="modal-description">LONG DESCRIPTION</p>
+          <h4 class="modal-price">PRICE</h4>
+        </div>
+      </div>
     <script src="script.js"></script>
 </body>
 </html>
